@@ -41,7 +41,7 @@ Cross-validated on the training set (mean over 5 folds):
 
 Final test set result (threshold 0.722): precision 0.647, recall 0.733, F1 0.687, average precision 0.755. The confusion matrix has 280 true positives, 102 false negatives, 153 false positives and 1,906 true negatives.
 
-**Key finding:** `PageValues` dominates the model. Without it, cross-validated average precision falls from 0.753 to 0.378 and F1 from 0.652 to 0.419. Could be indicating a potantial target leakage.
+**Key finding:** `PageValues` dominates the model. Without it, cross-validated average precision falls from 0.753 to 0.378, which may indicate target leakage.
 
 ## Limitations
 
@@ -64,7 +64,7 @@ Final test set result (threshold 0.722): precision 0.647, recall 0.733, F1 0.687
 ## How to run
 
 ```
-pip install -r requirements.txt
+pip install pandas numpy scikit-learn seaborn shap scipy jupyter
 jupyter notebook customer-classifying.ipynb
 ```
 
